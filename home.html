@@ -1,0 +1,43 @@
+<div id="contact-area">
+	<form name="angularForm" ng-submit="submitForm(angularForm.$valid)" novalidate>
+		<h1 class="heading-pages">Contact Form</h1>
+		<div class="form-group required-group">
+			<label>Name: </label>
+			<input type="text" name="name" ng-model="contactform.name" required />
+			<br>
+			<span ng-show="angularForm.name.$invalid && !angularForm.name.$pristine" class="error-block">Your name is required.</span>			
+		</div>	
+		<div class="form-group required-group">
+			<label>Email: </label>
+			<input type="email" name="email" ng-model="contactform.email" required>
+			<div ng-show="angularForm.email.$dirty && angularForm.email.$invalid">
+				<span class="error-block" ng-show="angularForm.email.$error.required">Email is required.</span>
+				<span class="error-block" ng-show="angularForm.email.$error.email">This is not a valid email.</span>
+			</div>
+		</div>
+		<div class="form-group required-group">
+			<label>Contact number: </label>
+			<input type="text" name="phone" ng-model="contactform.phone" required ng-pattern="/^\(?(\d{3})\)?[ .-]?(\d{3})[ .-]?(\d{4})$/">
+			<span ng-show="angularForm.phone.$invalid && !angularForm.phone.$pristine" class="error-block">Contact number is required.</span>			
+		</div>
+		<div class="form-group required-group">
+			<label for="selectGender"> Gender </label>
+			<select name="selectGender" id="selectGender" ng-model="contactform.selectGender" ng-required="true">
+				<option value="">Please select</option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label>Date: </label>
+			<input type="date" ng-model="contactform.date" />
+		</div>
+		<div class="form-group">
+			<label>Comments: </label>
+			<textarea name="formTextarea" ng-model="contactform.comments" rows="3" maxlength="100"></textarea>
+			<br>
+			<span class="error-block">{{100 - angularForm.formTextarea.$viewValue.length}} Characters Remaining</span>
+		</div>
+		<button class="submit-button" type="submit" ng-disabled="angularForm.$invalid">Submit</button>
+	</form>
+</div>	

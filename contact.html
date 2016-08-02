@@ -1,0 +1,27 @@
+<h1 class="heading-pages">Contact list</h1>
+<table>
+	<thead>
+		<tr>
+			<th>s. no.</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Contact</th>
+			<th>Gender</th>
+			<th>Comments</th>
+			<th>Modify</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="contact in contacts">
+		<td>{{$index + 1}}</td>
+		<td>{{contact.name}}</td>
+		<td>{{contact.email}}</td>
+		<td>{{contact.phone}}</td>
+		<td>{{contact.selectGender}}</td>
+		<td>{{contact.comments}}</td>
+		<td>
+			<a href="" ng-click="editContact(contact)">edit</a>
+			<a href="" ng-click="delContact(contact)">delete</a>
+		</td>
+	</tr>	
+</table>
+<div ng-show="!contacts.length" class="contact-list-empty">Contact List is empty!!!</div>	

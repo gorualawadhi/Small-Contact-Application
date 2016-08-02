@@ -1,0 +1,114 @@
+header, footer{
+	background: #ecabc0;    
+}
+header{
+	min-height: 60px;
+}
+header h1{
+	float: left;
+    color: #fff;
+    padding: 4px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+header ul{
+	float: right;
+}
+header ul li{
+	display:inline-block;
+}
+header ul li a{	
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+form{
+	max-width: 320px;
+    margin: 0 auto;
+    border: 3px solid #ecabc0;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 30px auto;
+    margin-bottom: 50px;
+}
+.heading-pages{
+	text-align: center;
+    font-size: 28px;
+    text-decoration: underline;
+    color: #ecabc0;
+}
+.form-group{
+	margin-bottom: 10px;
+    margin-top: 10px;
+}
+#contact-area {
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+    padding: 5px;
+    width: 60%;
+}
+
+
+#contact-area button.submit-button {
+	width: 100px;
+    background: #ecabc0;
+    padding: 8px;
+	color:#000;
+}
+label {
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+    width: 26%;
+    padding-top: 5px;
+    font-size: 15px;
+}
+.required-group label:after { 
+   content:"*";
+   color:red;
+}
+.error-block{
+	color:red;
+}
+textarea{
+	resize:none;
+	height:300px;
+	vertical-align:middle;
+}
+table {
+    border-collapse: collapse;
+	margin: 0px auto;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+	padding:9px;
+    word-break: break-word;
+}
+.contact-list-empty{
+	max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    background: #bb2c2c;
+    color: #fff;
+    padding: 12px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 8px #8c8686;
+}
+footer{
+	position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+footer p{
+	padding: 11px;
+    text-align: center;
+    color: #fff;
+}

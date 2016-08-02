@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>	
+		<meta charset="utf-8" />
+		<meta name="viewport" content = "width=device-width, height=device-height, initial-scale=1.0">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">		
+	</head>
+	<body ng-app="contactApp" ng-controller="mainCtrl">
+		<header>
+			<h1>Angular</h1>
+			<ul>
+				<li><a ui-sref="home">Home</a></li>
+				<li><a ui-sref="contact">Contact</a></li>
+				<li><a ui-sref="about">About-us</a></li>
+			</ul>			
+		</header>
+		<div ui-view autoscroll="false"></div>
+		<footer>
+			<p>&#169;Angular</p>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="http://code.angularjs.org/1.2.13/angular.js"></script>		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>	
